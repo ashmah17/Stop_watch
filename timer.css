@@ -1,0 +1,255 @@
+:root{
+    --head:rgb(77, 116, 102) ;
+    --middle: rgb(11, 17, 15);
+    --modal: rgb(81, 119, 105);
+    --body: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    outline: none;
+    border: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    /* background-color: var(--body); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.papa{
+    width: 70vh;
+    background-color:var(--head);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+#editPlace{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+}
+
+#editHour::placeholder, #editMin::placeholder, #editSec::placeholder{
+    color: var(--head);
+    font-size: 1.5rem;
+}
+#editHour{
+    position: absolute;
+    left: 4.7rem;
+    color: var(--head);
+    font-size: 1rem;
+    width: 5rem;
+    background-color: transparent;
+    border: 1px solid var(--head);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: var(--body);
+    cursor: pointer;
+
+}
+
+#editMin{
+    position: absolute;
+    left: 15.1rem;
+    color: var(--head);
+    font-size: 1rem;
+    width: 5rem;
+    background-color: transparent;
+    border: 1px solid var(--head);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: var(--body);
+    cursor: pointer;
+    
+}
+
+ #editSec{
+    position: absolute;
+    left: 24.8rem;
+    color: var(--head);
+    font-size: 1rem;
+    width: 5rem;
+    background-color: transparent;
+    border: 1px solid var(--head);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: var(--body);
+    cursor: pointer;
+
+}
+
+.h1{
+    /* background-color: #fff; */
+    margin: 1rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    /* display: none; */
+
+}
+h1{
+    font-size: 4rem;
+    font-weight:lighter;
+    color: #fff;
+}
+.papa h2{
+   /* background-color: yellow; */
+    font-size: 1rem;
+    width: 100%;
+    /* text-align:center ; */
+    font-weight: 100;
+}
+h5{
+    color: #fff;
+    margin: .5rem;
+    font-weight: 100;
+    font-size: 1.1rem;
+
+}
+.mama{
+    background-color: var(--middle);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vh;
+    height: 4rem;
+    padding: 1rem;
+    z-index: 77;
+    box-shadow: 2px 15px 20px rgba(9, 15, 13, 0.664);
+}
+.child{
+    width: 70vh;
+    background-color:var(--head);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+#edit, #redo #pause, #setting{
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+#showBtn{
+    font-size: 1rem;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--middle);
+    color: var(--body);
+    position: absolute;
+    top: 10rem;
+    left: 13rem;
+    display: none;
+    font-weight: 100;
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1rem;
+}
+#play{
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+    cursor:pointer ;
+}
+#pen{
+    cursor: pointer;
+}
+#pause{
+    cursor:pointer ;
+}
+.shadow{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.918);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 88;
+    visibility: hidden;
+    /* margin: none; */
+    transform: scale(1.5);
+    transition: visibility 0s, opacity 0.5s ease, transform 0.5s ease;
+}
+.modal{
+height: 60vh;
+background-color: var(--modal);
+width: 50vh;
+padding: 1.3rem;
+border-radius: 1rem;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.put{
+    border: 1px solid rgb(248, 243, 243);
+    padding: .9rem;
+    margin:1rem;
+    width: 99%;
+    background-color: transparent;
+    border-radius: .5rem;
+    color: var(--body);
+}
+
+.input2, .input1{
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+input::placeholder{
+    color: var(--body);
+    opacity: 0.5;
+}
+
+#editHour, #editMin, #editSec{
+width: 10px;
+gap: 1rem;
+}
+.input{
+    border: 1px solid rgb(248, 243, 243);
+    padding: .9rem;
+    margin:.2rem;
+    width: 10vh;
+    background-color: transparent;
+    border-radius: .5rem;
+    color: var(--body);
+
+}
+.h3{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+.submit{
+    width: 95%;
+    padding: .8rem;
+    border-radius: .5rem;
+    background-color: var(--middle);
+    color: var(--body);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

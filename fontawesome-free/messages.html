@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="./img/daada2-removebg-preview.png" type="image/x-icon">
+   <link rel="stylesheet" href="./admin.css">
+   <link rel="stylesheet" href="./fontawesome-free/css/all.css">
+   <title>Dashboard</title>
+</head>
+<body>
+    <form action="vtu.php" method="POST"></form>
+    
+        <div class="sidebar" id="sidebar">
+           <div class="close_btn">
+                <img src="./dada.png" alt="">
+                <span id="icon_btn" onclick='toggleSidebar()'>&times;</span>
+           </div>
+
+        <ul class="menu">
+
+            <li class="list">
+                <a href="admin.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            
+            <li class="list">
+                <a href="">
+                    <i class="fas fa-wifi"></i>
+                    <span>Data</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="">
+                    <i class="fas fa-mobile"></i>
+                    <span>Airtime</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="">
+                    <i class="fas fa-tv"></i>
+                    <span>Cable</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="">
+                    <i class="fas fa-bolt"></i>
+                    <span>Utility</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="">
+                    <i class="fas fa-receipt"></i>
+                    <span>Transactions</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="">
+                    <i class="fas fa-user"></i>
+                    <span>Transactions</span>
+                </a>
+            </li>
+            
+            <li class="list" id="logout">
+                <a href="landing.php">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </a>
+            </li>
+
+        </ul>
+        </div>
+        
+
+        <section class="main-content" id="main-content">
+            <div class="header-wrapper">
+
+                <div class="icon_box" >
+                   <span id="icon_btn" onclick='toggleSidebar()'>&#9776;</span>
+                </div>
+
+                 <div class="header-tittle">
+                     <h2>Dashboard</h2>
+                 </div>
+
+                <div class="user-info">
+                     <div class="search-box">
+                         <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+
+                            <a href="">
+                                <img src="./img/daada2-removebg-preview.png" alt="" style="width: 50px;">
+                            </a>
+
+                            <a href="profile.html">
+                                <i class="fa solid fa-caret-down"></i>
+                            </a>
+                </div>
+            </div>
+
+            <div class="box">
+               <h2>Credit user</h2>
+               <div class="first">
+                    <label for="">User Email</label>
+                    <input type="email" required>
+                
+                    <label for="">Action</label>
+                    <input type="email" required>
+               </div>
+               <div class="second">
+                    <label for="">Amount</label>
+                    <input type="email" required>
+                
+                    <label for="">Reason for Action</label>
+                    <input type="email" required>
+               </div>
+                <fieldset class="fieldset">
+                    <button name="update">Update Wallet</button>
+                    <a href=""></a><button name="back">Back</button></a>
+                </fieldset>
+            </div>
+
+           
+     
+        </section>
+
+    </form>
+
+
+<script>
+    function toggleSidebar(){
+    var sidebar = document.getElementById('sidebar');
+    // var mainContent = document.getElementById('main-content');
+    var openBtn = document.querySelector('#icon_btn');
+
+    if (sidebar.style.left === '0px'){
+        sidebar.style.left = '-250px';
+
+        mainContent.style.marginLeft = '0';
+        openBtn.innerHTML = '&#9776;';
+
+    }else{
+        sidebar.style.left = '0px';
+        mainContent.style.marginLeft = '250px';
+        openBtn.innerHTML = '&times;';
+    }
+    }
+</script>
+
+
+</body>
+</html>
