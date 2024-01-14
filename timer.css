@@ -2,6 +2,8 @@
     --head:rgb(77, 116, 102) ;
     --middle: rgb(11, 17, 15);
     --modal: rgb(81, 119, 105);
+    --active: rgb(61, 90, 80);
+    --focus: rgb(32, 48, 42);
     --body: #fff;
 }
 *{
@@ -22,7 +24,9 @@ body{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
+    margin-top: 5rem;
+    visibility: hidden;
     overflow: hidden;
 
 }
@@ -145,22 +149,60 @@ h5{
 }
 #showBtn{
     font-size: 1rem;
-    width: 15rem;
-    padding: 1rem;
+    width: 10rem;
+    padding: .5rem;
     border-radius: 1rem;
-    background-color: var(--middle);
+    background-color: var(--focus);
     color: var(--body);
-    position: absolute;
-    top: 10rem;
-    left: 13rem;
-    display: none;
     font-weight: 100;
+}
+button i{
+    color: var(--body);
+}
+#showClock a{
+    text-decoration: none;
+    color: var(--body);
+}
+#showClock{
+    font-size: 1rem;
+    width: 10rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    color: var(--body);
+    font-weight: 100;
+    background-color: var(--active);
+
+}
+#showStopWatch{
+    font-size: 1rem;
+    width: 10rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: var(--active);
+    color: var(--body);
+    font-weight: 100;
+}
+.heading{
+    width: 96%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    background-color: var(--head);
+    top: 0;
+    padding: 1rem;
 }
 .box{
     width: 100%;
     height: 100vh;
     overflow: hidden;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 #play{
     display: none;
@@ -181,14 +223,18 @@ h5{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.918);
     position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 88;
     visibility: hidden;
-    /* margin: none; */
     transform: scale(1.5);
     transition: visibility 0s, opacity 0.5s ease, transform 0.5s ease;
+}
+#modalBtn{
+    transition: 0.5 all ease;
 }
 .modal{
 height: 60vh;

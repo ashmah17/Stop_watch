@@ -9,6 +9,14 @@
 </head>
 <body>
     <div class="box">
+        <div class="heading">
+        <button  onclick="showContainer()" id="showBtn">
+            <i class="fa-solid fa-bell"></i></button>
+        <button  id="showClock"><a href="./clock.html">
+            <i class="fa-solid fa-clock"></i></a></button>
+        <button  onclick="showContainer()" id="showStopWatch">
+            <i class="fa-regular fa-hourglass"></i></button>
+        </div>
 
      <form action="action.php" method="POST">
 
@@ -33,10 +41,8 @@
         </div>
 
      </form>
-
-        <button  onclick="showContainer()" id="showBtn"> Show Stopped Watch</button>
     
-        <div class="container" id="container">
+    <div class="container" id="container">
 
         <div class="papa">
             <h2>COUNTDOWN TIMER</h2>
@@ -84,9 +90,9 @@
                 <i class="fa-solid fa-rotate"></i>
             </div>
 
-            <div id="pause_play" onclick="togglePause()">
-                <i id="pause" class="fa-solid fa-pause"></i>
-                <i id="play" onclick="togglePlay()" class="fa-solid fa-play"></i>
+            <div id="pause_play">
+                <i id="pause"  onclick="togglePause()" class="fa-solid fa-pause"></i>
+                <i id="play"  onclick="togglePlay()" class="fa-solid fa-play"></i>
             </div>
 
             <div id="setting" onclick="toggleSetting()">
